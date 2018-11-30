@@ -1,0 +1,33 @@
+button{
+  border-radius: 21px;
+    border: 2px solid white;
+    padding: 6px;
+    /* border: 1px solid white; */
+    color: white;
+    font-weight: 500;
+    background-color: #FF9A31;
+    cursor:pointer;
+    padding: 6px 12px 6px 12px;
+    transition:0.5s;
+}
+button:hover{
+  background-color: rgb(247, 169, 85);
+}
+html{
+  background: rgb(208, 0, 0);
+  overflow:hidden;
+}
+.buttoncontainer{
+  margin: 0 auto 0 auto;
+  text-align:center;
+  overflow:hidden;
+}
+#lastticket{
+  margin-top: 2px;
+  font-size: 11px;
+}
+#note{
+  margin:8px auto;
+  display:block;
+  border-radius:5px;
+}

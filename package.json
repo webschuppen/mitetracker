@@ -1,0 +1,66 @@
+{
+  "name": "mitetracker",
+  "version": "1.0.1",
+  "description": "A Mite Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "install-app-deps",
+    "pack": "build --dir",
+    "dist": "build",
+    "publish": "build -p always"
+  },
+  "provider": "github",
+  "build": {
+    "appId": "12312312312",
+    "win": {
+      "target": "squirrelWindows",
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "category": "your.app.category.type",
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 275
+        },
+        {
+          "x": 500,
+          "y": 275,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  },
+  "repository": "https://github.com/webschuppen/mitetracker",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "electron-builder": "^20.11.1"
+  },
+  "dependencies": {
+    "electron-builder-squirrel-windows": "^20.33.2",
+    "electron-fetch": "^1.1.0",
+    "electron-json-storage": "^4.1.0",
+    "electron-log": "^2.2.17",
+    "electron-prompt": "^0.5.0",
+    "electron-store": "^1.3.0",
+    "electron-updater": "^4.0.5",
+    "mite-api": "^0.1.0"
+  }
+}
