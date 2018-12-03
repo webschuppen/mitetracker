@@ -1,6 +1,6 @@
 {
   "name": "mitetracker",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "A Mite Application",
   "main": "main.js",
   "scripts": {
@@ -11,6 +11,7 @@
     "publish": "build -p always"
   },
   "provider": "github",
+  "releaseType": "release",
   "build": {
     "appId": "12312312312",
     "win": {
@@ -22,7 +23,8 @@
       "target": [
         "zip",
         "dmg"
-      ]
+      ],
+      "type": "distribution"
     },
     "dmg": {
       "contents": [
@@ -41,17 +43,13 @@
   },
   "repository": "https://github.com/webschuppen/mitetracker",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Electron"
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^1.8.4",
-    "electron-builder": "^20.11.1"
+    "electron": "^3.0.10",
+    "electron-builder": "^20.38.2"
   },
   "dependencies": {
     "electron-builder-squirrel-windows": "^20.33.2",

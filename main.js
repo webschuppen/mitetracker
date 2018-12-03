@@ -28,8 +28,11 @@ let mainWindow;
 // Some APIs can only be used after this event occurs.
 app.on('ready', function() {
   createWindow();
-  log.transports.file.level = 'debug';
-  autoUpdater.logger = log;
+});
+
+app.on('ready', async () => {
+  //check for updates every minute
+  app.isPackaged = true;
   autoUpdater.checkForUpdatesAndNotify();
 });
 
