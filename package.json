@@ -1,6 +1,6 @@
 {
   "name": "mitetracker",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "A Mite Application",
   "main": "main.js",
   "scripts": {
@@ -8,14 +8,15 @@
     "postinstall": "install-app-deps",
     "pack": "build --dir",
     "dist": "build",
-    "publish": "build -p always"
+    "publish": "EP_RELEASE=true build -p always",
+    "publishAll": "NODE_ENV=production build --win --x64 --ia32 --mac --linux --config ./config/release.json --publish always"
   },
   "provider": "github",
   "releaseType": "release",
   "build": {
     "appId": "12312312312",
     "win": {
-      "target": "squirrelWindows",
+      "target": "NSIS",
       "icon": "build/icon.ico"
     },
     "mac": {
